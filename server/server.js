@@ -1,10 +1,10 @@
 // require('./config/config.js');
 
 const express = require('express');
-const bodyParser = require('body-parser');
-const _ = require('lodash');
-const {ObjectID} = require('mongodb');
-const mongoose = require('mongoose');
+// const bodyParser = require('body-parser');
+// const _ = require('lodash');
+// const {ObjectID} = require('mongodb');
+// const mongoose = require('mongoose');
 
 // const {mongoose} = require('./db/mongoose.js');
 
@@ -15,7 +15,7 @@ const mongoose = require('mongoose');
 // mongoose.connect(process.env.MONGODB_URI);
 
 const app = new express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 
 app.get('/',(req,res)=>{
