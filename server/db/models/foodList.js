@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 var FoodList = mongoose.model('FoodList',{
-	customLink: {
-		type: Number,
+	customID: {
+		type: String,
 		required: true
 	},
 	name:{
@@ -19,7 +19,7 @@ var FoodList = mongoose.model('FoodList',{
 		type: Number,
 		required: true
 	},
-	comments:{
+	comment:{
 		type: String,
 		default: null
 	},

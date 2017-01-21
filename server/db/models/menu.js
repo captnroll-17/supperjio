@@ -12,6 +12,11 @@ var Menu = mongoose.model('Menu',{
 	price:{
 		type: Number,
 		required: true
+	},
+	frequency:{
+		type: Number,
+		required: true,
+		default: 0
 	}
 })
 
