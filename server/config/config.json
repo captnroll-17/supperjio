@@ -1,0 +1,11 @@
+{
+	"test":{
+		"PORT": 3000,
+		"MONGODB_URI": "mongodb://localhost:27017/supperJioTest"
+	},
+	"development":{
+		"PORT":3000,
+		"MONGODB_URI": "mongodb://localhost:27017/supperJio"
+
+	}
+}
