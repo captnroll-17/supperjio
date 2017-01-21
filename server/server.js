@@ -1,18 +1,16 @@
-// require('./config/config.js');
+require('./config/config.js');
 
 const express = require('express');
-// const bodyParser = require('body-parser');
-// const _ = require('lodash');
-// const {ObjectID} = require('mongodb');
-// const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const _ = require('lodash');
+const {ObjectID} = require('mongodb');
+const mongoose = require('mongoose');
 
-// const {mongoose} = require('./db/mongoose.js');
+const {FoodList} = require('./db/models/foodList');
+const {Menu} = require('./db/models/menu');
 
-// const {FoodList} = require('./db/models/foodList');
-// const {Menu} = require('./db/models/menu');
-
-// mongoose.Promise = global.Promise;
-// mongoose.connect(process.env.MONGODB_URI);
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = new express();
 const port = process.env.PORT || 3000;
@@ -24,13 +22,34 @@ app.get('/',(req,res)=>{
 //---------------GET---------------
 
 
-// app.get('/:id',(req,res)=>{
-	
-// })
+app.get('/:id',(req,res)=>{
+	var id = req.params.id;
 
-// app.post('/create/:id',(req,res)=>{
+	var menu = new Menu({
+		section: 'Thai Food',
+		title: 'Fried Rice',
+		price: 23.45
+	})
+
+	menu.save().then((doc)=>{
+		res.send(id);
+	})
+})
+
+app.post('/create/',(req,res)=>{
 	
-// })
+	var menu = new Menu({
+		sectio: 'Thai Food',
+		title: 'Fried Rice',
+		price: 23.45
+	})
+
+	menu.save().then((doc)=>{
+		res.send(doc);
+	})
+
+
+})
 
 // /:id
 // Get the supper page by id
