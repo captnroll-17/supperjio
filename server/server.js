@@ -6,6 +6,7 @@ const _ = require('lodash');
 const {ObjectID} = require('mongodb');
 const mongoose = require('mongoose');
 const shortid = require('shortid');
+const path = require('path');
 
 const {FoodList} = require('./db/models/foodList');
 const {Menu} = require('./db/models/menu');
@@ -16,31 +17,67 @@ mongoose.connect(process.env.MONGODB_URI);
 const app = new express();
 const port = process.env.PORT || 3000;
 
+// app.use(express.static('/public'));
+app.use('/order/:id',express.static(__dirname+'/../public'));
+app.use(express.static(__dirname+'/../public'));
+app.use('/name/:id',express.static(__dirname+'/../public'));
+app.use(bodyParser.json());
+
 
 app.get('/',(req,res)=>{
 
-	res.send(shortid.generate());
+	res.sendFile(path.join(__dirname+'/../public/landing.html'));
 })
 //---------------GET---------------
 
 
-app.get('/:id',(req,res)=>{
+app.get('/name/:id',(req,res)=>{
 	var id = req.params.id;
 
 	FoodList.find({
 		customID: id
 	}).then((list)=>{
-		res.send({list})
+	
+	if(!list){
+		alert('list not found');
+		return res.sendFile(path.join(__dirname+'/public/landing.html'));
+	}	
+
+	res.sendFile(path.join(__dirname+'/../public/dashboard.html'));
 	},(e)=>{
 		res.send(400).send(e);
 	})	
+})
+
+app.get('/order/:id',(req,res)=>{
+	var customid = req.params.id;
+	var name = req.query.name;
+	// var body = _.pick(req.body)
+	res.sendFile(path.join(__dirname+'/../public/menu.html'));
+
+	// FoodList.find({
+	// 	customID: id
+	// }).then((list)=>{
+	// 	res.send({list}).sendFile(path.join(__dirname+'/../public/menu.html'));
+	// },(e)=>{
+	// 	res.send(400).send(e);
+	// })	
+})
+
+app.get('/getname/:id',(req,res)=>{
+
+
+	console.log(name);
+	// res.status(200).send();
+	res.setHeader('name', name);
+	res.redirect('/order/'+customid);
 })
 
 app.get('/new/create',(req,res)=>{
 	
 	var customid = shortid.generate();
 	console.log(customid);
-	res.redirect('/'+customid);
+	res.redirect('/name/'+customid);
 
 })
 
@@ -127,21 +164,9 @@ app.get('/populate/order',(req,res)=>{
 	})
 })
 
-// /:id
-// Get the supper page by id
+// to retrieve JSON
 
 
-//---------------POST---------------
-
-// /create
-// Create a supper list. 
-
-//---------------PATCH---------------
-
-// /:id
-// update the order list.
-
-//---------------DELETE---------------
 
 
 
