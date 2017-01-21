@@ -165,9 +165,11 @@ app.get('/populate/order',(req,res)=>{
 })
 
 // to retrieve JSON
-app.get('/private/menu',()=>{
+app.get('/private/menu',(req,res)=>{
 	Menu.find().then((doc)=>{
-		console.log(doc);
+		res.send(doc);
+	},(e)=>{
+		res.send(e);
 	})
 })
 
