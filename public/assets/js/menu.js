@@ -109,12 +109,13 @@ function populateOtherOrders() {
   var chunk = "";
   var prevOrder = "";
   $.getJSON('/private/getList/'+customID, function(data) {
+    console.log(data);
     var items = [];
     $.each(data, function(key, val) {
+      var menuName = val.order;
+      var menuQty = parseInt(val.quantity);
       if (val.name != $('#owner').text()){
-        var menuName = val.order;
         var menuPrice = val.price + "";
-        var menuQty = parseInt(val.quantity);
         var menuComments = val.comment;
         if (menuComments == null){
           menuComments = '';
@@ -135,6 +136,11 @@ function populateOtherOrders() {
         else
           chunk += " (" + parseFloat(menuQty * parseFloat(menuPrice.replace('$', ''))).toFixed(2) + ")</td></tr>";
         $("#tableOrders").append(chunk);
+      } else {
+        console.log(menuName);
+        console.log(menuQty);
+        console.log($(menuName).text());
+        $(menuName).text(menuQty);
       }
     });
   });           
@@ -165,12 +171,10 @@ function processMenu() {
   var count = 0;
   var chunk = "";
   $.getJSON("/private/menu", function(data) {
-    console.log(data);
     var items = [];
     $.each(data, function(key, val) {
       if (section != val.section) {
         section = val.section;
-        console.log(section);
         if (count === 0) {
           count = 1;
         } else {
@@ -178,8 +182,7 @@ function processMenu() {
           $("#menu-wrapper").append(chunk);
           chunk = "";
         }
-        console.log(section);
-        chunk += '<details><summary class ="menu-summary">' + val.section + '</summary><table><tr><td class = "menu-name">' + val.title + '<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$' + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty">0</span><button class="xsmall addQty">+</button></td></tr>';
+        chunk += '<details><summary class ="menu-summary">' + val.section + '</summary><table><tr><td class = "menu-name">' + val.title + `<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$` + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty" id="'+val.title+'">0</span><button class="xsmall addQty">+</button></td></tr>';
 
       } else {
         chunk += '<tr><td class = "menu-name">' + val.title + '<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$' + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty">0</span><button class="xsmall addQty">+</button></td></tr>';

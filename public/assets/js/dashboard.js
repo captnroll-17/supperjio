@@ -5,7 +5,7 @@ var customID = pathArray[2];
 $(document).ready(function() {
 
   //$("#urlbox").text(window.location.href);
-  $("#urlbox").text("supperjio.com/XJdjs");
+  $("#urlbox").text(window.location.href);
   populateOrders();
   document.getElementById("copyBtn").addEventListener("click", function() {
     copyToClipboard(window.location.href);
@@ -38,6 +38,14 @@ $(document).ready(function() {
   document.getElementById("addNameBtn").addEventListener("click", function() {
     console.log($("#ownerName").val());
     
+  });
+
+
+  $(document).on('click', '.editButton',function(t){
+    event.preventDefault();
+    var name = $(t.target).parent().prev().text();
+    window.location.href= '/order/'+customID+'?name='+name;
+    // console.log(t.target);
   });
   
   var isMobile = {
@@ -100,7 +108,7 @@ function populateOrders(){
             $("#tableOrders").append(chunk);
             sum = 0;
           }
-          chunk = "<tr><td>" + ownerName + "</td><td colspan = '3'>(edit order)</td>";
+          chunk = "<tr><td>" + ownerName + "</td><td colspan = '3'><a href='' class ='editButton' style='color:white'>(edit order)</a></td>";
           $("#tableOrders").append(chunk);
           prevOrder = ownerName;
         }
