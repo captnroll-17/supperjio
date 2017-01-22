@@ -39,37 +39,24 @@
 					</header> -->
 
 				<!-- Menu -->
-					<nav id="menu" style="width:100%;">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
+					<nav class="itemslist" id="menu" style="width:100%;">
+						<h2 style="color:#ff8c00;">
+							Orders sorted by items
+						</h2>
+						<table id ="tableConsolidatedOrders" style="color:white;">
+							<tr>
+								<th class="db-table">Item</th>
+								<th class="db-table">Quantity</th>
+								<th class="db-table">Price ($)</th>
+							</tr>	
+						</table>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
 							<div class="centerdiv" id="cd-header">
-								<span class="db-highlight" id="urlbox"></span>
+								<input class="db-highlight" id="urlbox"></input>
 								<br>
 								<button id="copyBtn" class = "small" style="margin-top:1em;">Copy</button>
 								<button id="shareBtn" class = "small" style="margin-top:1em;">Share to WhatsApp</button>	
@@ -79,7 +66,7 @@
 									<tr>
 										<th class="db-table">Name</th>
 										<th class="db-table">Item</th>
-										<th class="db-table">Qty</th>
+										<th class="db-table">Quantity</th>
 										<th class="db-table">Price ($)</th>
 									</tr>	
 									<tr>
@@ -97,9 +84,11 @@
 							</div>
 							<br>
 							<div>
-								<button class="db-consolidated">
-									See consolidated orders
-								</button>
+								<a href = "#menu">
+									<button id ="consolidatedOrdersBtn" class="db-consolidated">
+										Orders sorted by items
+									</button>
+								</a>
 							</div>
 							
 						</div>

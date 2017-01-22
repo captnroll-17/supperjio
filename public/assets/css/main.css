@@ -3403,6 +3403,8 @@
     font-size: .8em;
     color: #282526;
     padding: 5px 5px 5px 5px;
+		border-color: transparent;
+    width: 80%;
 	
 }
 .centerdiv {
@@ -3434,6 +3436,7 @@ input.db-yourname{
 	border-color:transparent;
 	background-color:#e1e0e1;
 	font-size:0.8em;
+	width:80%;
 }
 
 button#copyBtn.small,button#shareBtn.small,button#addNameBtn.small,button.db-consolidated {
@@ -3443,6 +3446,10 @@ button#copyBtn.small,button#shareBtn.small,button#addNameBtn.small,button.db-con
 
 td#db-insertname {
 	vertical-align:middle;
+}
+
+a.editButton {
+	color:#efbe4a;
 }
 /* Menu */
 input.menu-number {
@@ -3567,3 +3574,6 @@ button#landing-getlink.supper {
 	bottom:8%;
 }
 
+#menu.itemslist{
+	height:80%;
+}

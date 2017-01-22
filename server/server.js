@@ -271,8 +271,22 @@ app.post('/private/postOrder/:id',(req,res)=>{
 			console.log(doc.frequency);
 		})
 	})
-	res.redirect('/name/'+id);
+	res.send();
 });
+
+app.delete('/private/delete/:id/:name',(req,res)=>{
+	var id = req.params.id;
+	var name = req.params.name;
+	console.log(id);
+	console.log(name);
+
+	OrderList.remove({
+		'name': name,
+		'customID': id
+	}).then((doc)=>{
+		console.log(doc);
+	})
+})
 
 
 app.listen(port,()=>{

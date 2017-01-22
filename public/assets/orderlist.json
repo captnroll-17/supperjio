@@ -14,7 +14,7 @@
     "customID": "Ska6BCxve",
     "name": "Krittin",
     "order": "Teh Cino",
-    "price": 2,
+    "price": 2.20,
     "quantity": 5,
     "_id": "5883d1fced0d493aa7cef91c",
     "comment": "no milk"
@@ -24,9 +24,30 @@
     "customID": "Ska6BCxve",
     "name": "Gabriel",
     "order": "Chees Fries",
-    "price": 3,
+    "price": 3.50,
     "quantity": 2,
     "_id": "5883d1fced0d493aa7cef91b",
     "comment": null
-  }  
+  } ,
+  {
+    "__v": 0,
+    "customID": "Ska6BCxve",
+    "name": "Gabriel",
+    "order": "Teh Cino",
+    "price": 2.20,
+    "quantity": 2,
+    "_id": "5883d1fced0d493aa7cef91c",
+    "comment": "no milk"
+  },
+  {
+    "__v": 0,
+    "customID": "Ska6BCxve",
+    "name": "Gabriel",
+    "order": "Teh Cino",
+    "price": 2.20,
+    "quantity": 5,
+    "_id": "5883d1fced0d493aa7cef91c",
+    "comment": null
+  }
+  
 ]
