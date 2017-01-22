@@ -108,7 +108,7 @@ function populateOwnerViewOrder() {
 function populateOtherOrders() {
   var chunk = "";
   var prevOrder = "";
-  $.getJSON("assets/orderlist.json", function(data) {
+  $.getJSON("/private/getList/"+customID, function(data) {
     var items = [];
     $.each(data, function(key, val) {
       if (val.name != $('#owner').text()) {
