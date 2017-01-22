@@ -9,7 +9,7 @@ const shortid = require('shortid');
 const path = require('path');
 const sortObject = require('sort-object');
 
-const {OrderList} = require('./db/models/OrderList');
+const {OrderList} = require('./db/models/orderlist');
 const {Menu} = require('./db/models/menu');
 
 mongoose.Promise = global.Promise;
