@@ -165,6 +165,7 @@ function processMenu() {
   var count = 0;
   var chunk = "";
   $.getJSON("/private/menu", function(data) {
+    console.log(data);
     var items = [];
     $.each(data, function(key, val) {
       if (section != val.section) {
