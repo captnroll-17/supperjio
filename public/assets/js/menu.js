@@ -170,7 +170,7 @@ function processMenu() {
     $.each(data, function(key, val) {
       if (section != val.section) {
         section = val.section;
-
+        console.log(section);
         if (count === 0) {
           count = 1;
         } else {
@@ -178,13 +178,15 @@ function processMenu() {
           $("#menu-wrapper").append(chunk);
           chunk = "";
         }
-
+        console.log(section);
         chunk += '<details><summary class ="menu-summary">' + val.section + '</summary><table><tr><td class = "menu-name">' + val.title + '<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$' + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty">0</span><button class="xsmall addQty">+</button></td></tr>';
 
       } else {
         chunk += '<tr><td class = "menu-name">' + val.title + '<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$' + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty">0</span><button class="xsmall addQty">+</button></td></tr>';
       }
+
     });
+    $("#menu-wrapper").append(chunk);
   });
 
 }
