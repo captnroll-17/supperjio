@@ -9,8 +9,9 @@ const shortid = require('shortid');
 const path = require('path');
 const sortObject = require('sort-object');
 
-const {OrderList} = require('./db/models/orderlist.js');
 const {Menu} = require('./db/models/menu');
+const {OrderList} = require('./db/models/orderlist.js');
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI);
