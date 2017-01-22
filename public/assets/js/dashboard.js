@@ -83,7 +83,7 @@ $(document).ready(function() {
       var chunk = '';
       var prevOrder, prevComment, prevQty, prevPrice, currentComment, deliveryFee=3;
       var totalPrice = deliveryFee;
-      $.getJSON("assets/orderlist.json", function(data) {
+      $.getJSON("/private/getList/"+customID, function(data) {
         data.sort((a, b) => {
           var nameA = a.order.toLowerCase();
           var nameB = b.order.toLowerCase();
