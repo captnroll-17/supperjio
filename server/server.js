@@ -10,7 +10,7 @@ const path = require('path');
 const sortObject = require('sort-object');
 
 const {Menu} = require('./db/models/menu');
-const {OrderList} = require('./db/models/orderlist.js');
+const {OrderList} = require('./db/models/orderList.js');
 
 
 mongoose.Promise = global.Promise;
