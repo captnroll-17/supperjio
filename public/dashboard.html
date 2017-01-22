@@ -5,7 +5,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
+	<head><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<title>supperjio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,12 +18,12 @@
 	<body>
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
+<p style="text-align:center; margin:0;"><img src="http://i.imgur.com/27QI2gE.png" style="width:50%;margin-top:5%"></p>
+				<!-- Header
 					<header id="header">
 						<div class="inner">
 
-							<!-- Logo -->
+							<!-- Logo
 								<a href="index.html" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
 								</a>
@@ -33,9 +34,9 @@
 										<li><a href="#menu">Menu</a></li>
 									</ul>
 								</nav>
-							-->
+							
 						</div>
-					</header>
+					</header> -->
 
 				<!-- Menu -->
 					<nav id="menu" style="width:100%;">
@@ -67,48 +68,31 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<div class="centerdiv">
-								<span class="db-highlight">http://example.com/customlink</span>
+							<div class="centerdiv" id="cd-header">
+								<span class="db-highlight" id="urlbox"></span>
 								<br>
-								<button class = "small" style="margin-top:1em;">Copy</button>
-								<button class = "small" style="margin-top:1em;">Share</button>	
+								<button id="copyBtn" class = "small" style="margin-top:1em;">Copy</button>
+								<button id="shareBtn" class = "small" style="margin-top:1em;">Share to WhatsApp</button>	
 							</div>
-							<div>
-								<br>
-								<table>
+							<div class="db-menu">
+								<table id ="tableOrders" style="color:white;">
 									<tr>
-										<th>Name</th>
-										<th>Item</th>
-										<th>Price ($)</th>
+										<th class="db-table">Name</th>
+										<th class="db-table">Item</th>
+										<th class="db-table">Qty</th>
+										<th class="db-table">Price ($)</th>
 									</tr>	
 									<tr>
-										<td colspan="2">
-											<form class="form-default" method="get" id="nameForm" action="">
-												<input class ="db-yourname" type="text" name="name" placeholder="Your name">
-											
+										<td colspan="3" id="db-insertname">
+												<input class ="db-yourname"  name="name" placeholder=" Your name">
 										</td>
 										<td>
-											<button class="small" type="submit" id='formButton'>
+											<button id="addNameBtn" class="small" >
 												Add!
 											</button>
-											</form>
 										</td>
 									</tr>
-									<tr>
-										<td>Gabriel</td>
-										<td>Maggi</td>
-										<td>3.50</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Fried Rice<br>(no chilli)</td>
-										<td>1.50</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Total</td>
-										<td>5.00</td>
-									</tr>
+									
 								</table>
 							</div>
 							<br>
@@ -129,26 +113,13 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/dashboard.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function (){
 					var pathName = window.location.pathname;
 					var pathArray = pathName.split('/');
 					$('#nameForm').attr("action","/order/"+pathArray[2]);
-
-					// $('#formButton').click(function(event){
-
-					// 	var name = $('#nameForm input').val();
-					// 	console.log(name);
-					// 	var request = new XMLHttpRequest();
-					// 	request.open('GET','/order/'+pathArray[2],true);
-					// 	request.setRequestHeader("name",name);
-					// 	request.send();
-					// })
-					
-					
-					
 				});
 			</script>
-
 	</body>
 </html>

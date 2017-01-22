@@ -1,5 +1,24 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+/* @import url('https://www.fontify.me/wf/f5cc2097b82a8012537498a6ba4226fe');
+ */
+@font-face {
+    font-family: "Avenir";
+    src:url("../fonts/Avenir LT Std 95 Black.otf");
+}
+
+@font-face {
+    font-family: "Avenir Roman";
+    src:url("../fonts/AvenirLTStd-Roman.otf");
+}
+
+@font-face {
+    font-family: "Fancy";
+    src:url("../fonts/Chasing Embers Demo Version.otf");
+}
 
 /*
 	Phantom by HTML5 UP
@@ -13,8 +32,9 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
+		font-family: "Avenir Roman";
 		font-size: 100%;
-		font: inherit;
+/* 		font: inherit; */
 		vertical-align: baseline;
 	}
 
@@ -1640,11 +1660,11 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #585858;
+		color: #282526;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
-		line-height: 1.75;
+		line-height: 1.5;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1669,7 +1689,7 @@
 		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
-		color: #585858;
+		color: #900C3F;
 		border-bottom:  1px rgba(88, 88, 88, 0);
 	}
 
@@ -1722,9 +1742,8 @@
 	h2, h3, h4, h5, h6 {
 		font-weight: 900;
 		line-height: 1.5;
-		margin: 0 0 2em 0;
-		text-transform: uppercase;
-		letter-spacing: 0.35em;
+		text-transform: none;
+		letter-spacing: 0;
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2407,11 +2426,14 @@
 			}
 
 		table td {
-			padding: 0.05em 0.05em;
+			padding: 0.25em 0.35em;
+			font-size:0.8em;
+			color: white;
+    	background-color: rgba(40, 37, 38, 0.7);
 		}
 
 		table th {
-			font-size: 0.9em;
+			font-size: 0.8em;
 			font-weight: 900;
 			padding: 0 0.15em 0.15em 0.15em 0.15em;
 			text-align: left;
@@ -2434,6 +2456,7 @@
 				border-left-width: 0;
 				border-top-width: 0;
 			}
+
 
 				table.alt tbody tr td:first-child {
 					border-left-width: 1px;
@@ -2466,14 +2489,15 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		background-color: transparent;
+		background-color: #282526;
 		border-radius: 4px;
 		border: 0;
 		box-shadow: inset 0 0 0 2px #585858;
-		color: #585858 !important;
+		color: #ff8a2b!important;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.8em;
+		font-size: 0.7em;
+		font-family: "Avenir Roman";
 		font-weight: 900;
 		height: 3.5em;
 		letter-spacing: 0.35em;
@@ -2863,7 +2887,7 @@
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding-top: 38%;
 	}
 
 		#header .logo {
@@ -2982,7 +3006,7 @@
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding-top: 38% ;
 			}
 
 				#header nav {
@@ -3205,7 +3229,7 @@
 
 	#footer {
 		padding: 5em 0 6em 0 ;
-		background-color: #f6f6f6;
+		background-color: #282526;
 		bottom: 0;
 		position: fixed;
 		width: 100%;
@@ -3358,7 +3382,7 @@
 	#wrapper > * > .inner {
 		width: 100%;
 		max-width: 68em;
-		margin: 0 auto;
+		margin: 0 0 10% 0;
 		padding: 0 2.5em;
 	}
 
@@ -3374,9 +3398,11 @@
 /* Dashboard */			
 
 .db-highlight {
-	background-color: grey;
-	color: white;
-	padding: 5px 5px 5px 5px;
+    background-color: #ff8a2b;
+    font-family: "Avenir";
+    font-size: .8em;
+    color: #282526;
+    padding: 5px 5px 5px 5px;
 	
 }
 .centerdiv {
@@ -3390,19 +3416,154 @@
 	margin:0;
 }
 
-input.menu-number {
-	width:20%;
+.db-menu{
+	background-color:rgba(40,37,38,0.5);
+	margin-top:10%;
+}
+
+
+th.db-table{
+	padding:0.5em 0.5em 0.5em 0.5em;
+	font-family:"Avenir";
+	background-color:#282526;
+	color:#ff8c00;
+}
+
+input.db-yourname{
+	border-radius:5px;
+	border-color:transparent;
+	background-color:#e1e0e1;
+	font-size:0.8em;
+}
+
+button#copyBtn.small,button#shareBtn.small,button#addNameBtn.small,button.db-consolidated {
+	letter-spacing:0;
 	text-align:center;
 }
 
+td#db-insertname {
+	vertical-align:middle;
+}
+/* Menu */
+input.menu-number {
+	width:20%;
+	text-align:center;
+	display:-webkit-inline-box;
+}
+
+button.xsmall.subtractQty,button.xsmall.addQty{
+	font-size:0.8em;
+	font-family:"Avenir";
+}
 form.menu-form {
-	font-size: 0.80em;
+	font-size: 1em;
 }
 td.menu-qty {
-	display:inline-flex;
+	text-align:center;
+	width:30%
 }
 
 input.menu-comments {
-	font-size:0.75em;
+	font-size:0.8em;
+	border-radius:5px;
+	border-color:transparent;
+	background-color:#e1e0e1;
+	width:80%;
+	
+}
+
+summary.menu-summary {
+	font-size:1em;
+	color: #e1e0e1;
+	padding: .3em .5em .3em .5em;
+  background-color: rgba(40, 37, 38, 0.7);
+	border-radius:5px;
+	font-family:"Avenir";
+	
+}
+
+summary#popular.menu-summary {
+	color: #ff8a2b;
+}
+
+span.order-qty{
+	padding: 0 5px 0 5px;
+}
+body.menu-body{
+	background-image:url("http://i.imgur.com/zv0tXj0.jpg");
+	background-position:center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+footer#footer{
+	background-color:#282526;
+}
+
+div#menu-footer.centerdiv{
+	color:white;
+}
+
+button#viewOrderBtn.small, button#submitBtn.small {
+	color:#282526 !important;
+	background-color:#ff8c00;
+	letter-spacing:0;
+}
+
+th.menu-footerlist{
+	    padding: .5em .5em .5em .5em;
+}
+
+table td#popular {
+	color:#ff8c00;
+}
+
+h2#menu-UserOrders.centerdiv,span#owner {
+		font-family: 'Anton', sans-serif;
+		color:#282526;
+		font-size:1.5em;
+		margin-bottom:10%;
+}
+/* Landing */
+
+body{
+	background-image:url("http://i.imgur.com/orDDJ8L.jpg");
+	background-position:center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+html {
+  height: 100vh;
+}
+body {
+  min-height: 100vh;
+}
+
+h1.landing-rectangle{
+		width:100%;
+		background-color:rgba(239,190,74,0.7);
+		font-family: "Avenir Roman";
+		font-size:1.65em;
+	position:absolute;
+		top:45%;
+		text-align:center;
+		padding:0.5em 1em 0.5em 1em;
+}
+
+button#landing-getlink.supper {
+		width:60%;
+	  margin-left: 20%;
+		background-color:#282526;
+		color:#ff8c00 !important;
+		font-family: "Avenir";
+		border-radius:10px;
+		letter-spacing:0;
+		font-size:1.2em;
+		text-transform:none;
+	position:absolute;
+	bottom:8%;
 }
 

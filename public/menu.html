@@ -5,8 +5,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>supperjio</title>
+	
+	<head><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- 		<title>supperjio</title> -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -14,54 +16,35 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body>
+	<body class="menu-body">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
+	<p style="text-align:center; margin:0;"><img src="http://i.imgur.com/27QI2gE.png" style="width:50%;margin-top:5%"></p>
+				<!-- Header 
 					<header id="header">
 						<div class="inner">
 
-							<!-- Logo -->
+							<!-- Logo 
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.jpg" alt="" /></span><span class="title">Krittin</span>
+									<span class="symbol"><img src="images/logo.jpg" alt="" /></span><span class="title">Supper Jio!</span>
 								</a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+							
 
 						</div>
 					</header>
-
+				
 				<!-- Menu -->
-					<nav id="menu" style="width:100%;">
-						<h2>Orders</h2>
+					<nav id="menu" style="width:100%; background-color:rgba(40,37,38,0.8);">
+						<h2 style="color:#ff8c00;">Orders</h2>
 						<div>
-							<table>
+							<table id = "tableOrders">
 									<tr>
-										<th>Name</th>
-										<th>Item</th>
-										<th>Price ($)</th>
+										<th class="menu-footerlist">Name</th>
+										<th class="menu-footerlist">Item</th>
+										<th class="menu-footerlist">Qty</th>
+										<th class="menu-footerlist">Price</th>
 									</tr>	
-									<tr>
-										<td>Gabriel</td>
-										<td>Maggi</td>
-										<td>3.50</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Fried Rice<br>(no chilli)</td>
-										<td>1.50</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Total</td>
-										<td>5.00</td>
-									</tr>
 								</table>
 						</div>
 					</nav>
@@ -70,163 +53,77 @@
 					<div id="main">
 						<div class="inner">
 							<div>
-								<h2>
-									Gabriel's orders
+								<h2 class="centerdiv" id = "menu-UserOrders">
+									<span id = "owner" ></span>'s orders
 								</h2>								
 							</div>
-							<div>
-								<h2>
-									Menu
-								</h2>
-									<form class="menu-form">
-										<details>
-											<summary>Most popular</summary>
-											<table>
+							<div id = "menu-wrapper">
+								
+										<details open>
+											<summary class="menu-summary" id="popular">Most Popular</summary>
+											<table id="popular">
 												<tr>
-													<td>this is a very long food item</td>
-													<td><input class ="menu-comments" type="text" name="comments" placeholder="Comments" value="this is a very long comment"></td>
-													<td>$3.00</td>
+													<td class = "menu-name">Food #1<br> <input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments"></td>
+													<td class = "menu-price">$3.00</td>
 													<td class="menu-qty">
-														<button class="xsmall">-</button>
-														<input class ="menu-number" type="number" min="0" value ="0"/>
-														<button class="xsmall">+</button>
+														<button class="xsmall subtractQty">-</button>
+														<span class="order-qty">0</span>
+														<button class="xsmall addQty">+</button>
 													</td>
 												</tr>
 												<tr>
-													<td>this is a very long food item</td>
-													<td><input class ="menu-comments" type="text" name="comments" placeholder="Comments" value="this is a very long comment"></td>
-													<td>$3.00</td>
+													<td class = "menu-name">Food #2<br> <input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td>
+													<td class = "menu-price">$1.50</td>
 													<td class="menu-qty">
-														<button class="xsmall">-</button>
-														<input class ="menu-number" type="number" min="0" value ="0"/>
-														<button class="xsmall">+</button>
+														<button class="xsmall subtractQty">-</button>
+														<span class="order-qty">0</span>
+														<button class="xsmall addQty">+</button>
 													</td>
 												</tr>
 											</table>
 										</details>
+										
 										<details>
-											<summary>Prata</summary>
+											<summary class="menu-summary">Prata</summary>
 											<table>
 												<tr>
-													<td>1. kosong</td>
-													<td><textarea>comments</textarea></td>
-													<td>$1.00</td>
-													<td>
-														Qty 
-														<button class="small">-</button>
-														<button class="small">+</button>
-														<input type="number" min="0" value ="0"/>
+													<td class = "menu-name">Food #3<br> <input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td>
+													<td class = "menu-price">$0.80</td>
+													<td class="menu-qty">
+														<button class="xsmall subtractQty">-</button>
+														<span class="order-qty">0</span>
+														<button class="xsmall addQty">+</button>
 													</td>
 												</tr>
 												<tr>
-													<td>2. cheese</td>
-													<td><textarea>comments</textarea></td>
-													<td>$1.50</td>
-													<td>
-														Qty 
-														<button class="buttonsmall">-</button>
-														<button class="buttonsmall">+</button>
-														<input type="number" min="0" value ="0"/>
+													<td class = "menu-name">Food #4<br> <input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td>
+													<td class = "menu-price">$0.50</td>
+													<td class="menu-qty">
+														<button class="xsmall subtractQty">-</button>
+														<span class="order-qty">0</span>
+														<button class="xsmall addQty">+</button>
 													</td>
 												</tr>
 											</table>
-										</details>
-									</form>
+								</details>
+									
 							</div>
 							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
-							<br>
-							<br>
-							Test Line
+							
 							
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<div class="centerdiv">
-							Total Price : $xx.xx
+						<div class="centerdiv" id="menu-footer">
+							Total Price : $ <span id="totalPrice">0</span>
 							<br>
-							<button class="small" style="margin-top:1em; margin-right:1em">
+							<a href="#menu">
+							<button id ="viewOrderBtn" class="small" style="margin-top:1em; margin-right:1em">
 								View orders
 							</button></a></td>
-							<button class="small" style="margin-top:1em;">
+							<button id ="submitBtn" class="small" style="margin-top:1em;">
 									Submit order
 							</button>
 							
@@ -236,11 +133,13 @@
 			</div>
 
 		<!-- Scripts -->
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/menu.js"></script>
 
 	</body>
 </html>

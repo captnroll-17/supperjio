@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var FoodList = mongoose.model('FoodList',{
+var OrderList = mongoose.model('OrderList',{
 	customID: {
 		type: String,
 		required: true
@@ -28,4 +28,4 @@ var FoodList = mongoose.model('FoodList',{
 	}
 })
 
-module.exports = {FoodList};
+module.exports = {OrderList};

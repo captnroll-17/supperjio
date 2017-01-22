@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "5883615c6cef270011874bd8",
+    "__v": 0,
+    "section": "Western",
+    "title": "Mushroom Olio",
+    "price": 5,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bd9",
+    "__v": 0,
+    "section": "Western",
+    "title": "Beef Bolognaise",
+    "price": 6.5,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bda",
+    "__v": 0,
+    "section": "Western",
+    "title": "Cheese Fries",
+    "price": 4,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bdb",
+    "__v": 0,
+    "section": "Western",
+    "title": "Roti John Combon",
+    "price": 5,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bdc",
+    "__v": 0,
+    "section": "Western",
+    "title": "Fried Fish Burger",
+    "price": 6,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bdd",
+    "__v": 0,
+    "section": "Drinks",
+    "title": "Watermelon Juice",
+    "price": 3,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bde",
+    "__v": 0,
+    "section": "Drinks",
+    "title": "Lime Juice",
+    "price": 1.8,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874bdf",
+    "__v": 0,
+    "section": "Drinks",
+    "title": "Teh O Peng",
+    "price": 1.4,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be0",
+    "__v": 0,
+    "section": "Drinks",
+    "title": "Teh Peng",
+    "price": 1.5,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be1",
+    "__v": 0,
+    "section": "Drinks",
+    "title": "Teh Cino",
+    "price": 1.8,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be2",
+    "__v": 0,
+    "section": "Indian",
+    "title": "Cheese Naan",
+    "price": 3,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be3",
+    "__v": 0,
+    "section": "Indian",
+    "title": "Garlic Naan",
+    "price": 2.5,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be4",
+    "__v": 0,
+    "section": "Indian",
+    "title": "Butter Chicken",
+    "price": 7,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be5",
+    "__v": 0,
+    "section": "Indian",
+    "title": "Mutton Kroma`",
+    "price": 6,
+    "frequency": 0
+  },
+  {
+    "_id": "5883615c6cef270011874be6",
+    "__v": 0,
+    "section": "Indian",
+    "title": "Vegetable Briyani",
+    "price": 5,
+    "frequency": 0
+  }
+]

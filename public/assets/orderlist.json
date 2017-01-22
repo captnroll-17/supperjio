@@ -1,0 +1,32 @@
+[
+  {
+    "__v": 0,
+    "customID": "Ska6BCxve",
+    "name": "Krittin",
+    "order": "Fried Rice",
+    "price": 4,
+    "quantity": 1,
+    "_id": "5883d1fced0d493aa7cef91a",
+    "comment": "no rice"
+  },
+  {
+    "__v": 0,
+    "customID": "Ska6BCxve",
+    "name": "Krittin",
+    "order": "Teh Cino",
+    "price": 2,
+    "quantity": 5,
+    "_id": "5883d1fced0d493aa7cef91c",
+    "comment": "no milk"
+  },
+  {
+    "__v": 0,
+    "customID": "Ska6BCxve",
+    "name": "Gabriel",
+    "order": "Chees Fries",
+    "price": 3,
+    "quantity": 2,
+    "_id": "5883d1fced0d493aa7cef91b",
+    "comment": null
+  }  
+]
