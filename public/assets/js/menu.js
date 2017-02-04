@@ -145,12 +145,14 @@ function populateOtherOrders() {
 //to populate the order for editing. 
 function populateOwnerOrders(){
   var nameOfOwner= $('#owner').text();
+  var data = [];
   // console.log(nameOfOwner+' 148');
     $.ajax({
       url: '/private/delete/'+customID+'/'+nameOfOwner,
-      type: 'DELETE'
-
-    }).done(function(){
+      type: 'DELETE',
+      data: data
+    }).done(function(data){
+      console.log(data);
       $.each(data, function(key, val) {
         console.log(val.name);
         var menuName = val.order;
@@ -160,7 +162,7 @@ function populateOwnerOrders(){
           var param = menuName.replace(/\s/g,'');
           var qtyText = $(`#${param}`);
           console.log(qtyText);
-          console.log($('#CheeseNaan'));
+          console.log($('.order-qty #CheeseNaan'));
         }
       });
     //   if (val.name === $('#owner').text()){

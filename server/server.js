@@ -280,14 +280,18 @@ app.delete('/private/delete/:id/:name',(req,res)=>{
 	console.log('---------server---------');
 	console.log(id);
 	console.log(name);
-
-	OrderList.remove({
-		'name': name,
-		'customID': id
+	OrderList.find({
+		'name':name,
+		'customID':id
 	}).then((doc)=>{
-		console.log(doc);
-		res.send(doc);
+		OrderList.remove({
+			'name':name,
+			'customID':id
+		}).then(()=>{
+			res.send(doc);
+		})
 	})
+
 })
 
 
