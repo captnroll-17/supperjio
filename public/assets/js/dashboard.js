@@ -81,7 +81,7 @@ $(document).ready(function() {
     $("#consolidatedOrdersBtn").click(function() {
       $("#tableConsolidatedOrders").find("tr:gt(0)").remove();
       var chunk = '';
-      var prevOrder, prevComment, prevQty, prevPrice, currentComment, deliveryFee=3;
+      var prevOrder, prevComment, prevQty, prevPrice, currentComment, deliveryFee=2;
       var totalPrice = deliveryFee;
       $.getJSON("/private/getList/"+customID, function(data) {
         data.sort((a, b) => {
