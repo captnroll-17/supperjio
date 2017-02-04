@@ -7,8 +7,8 @@ $(document).ready(function() {
 
   var ownerName = GetURLParameter("name");
   $("#owner").text(ownerName);
-
   populateOwnerOrders();
+
 
   $(document).on('click', '.addQty', function(e) {
     add($(this));
@@ -17,6 +17,8 @@ $(document).ready(function() {
   $(document).on('click', '.subtractQty', function(e) {
     subtract($(this));
   });
+
+
 
   $("#viewOrderBtn").click(function() {
     populateOwnerViewOrder();
@@ -143,31 +145,28 @@ function populateOtherOrders() {
 //to populate the order for editing. 
 function populateOwnerOrders(){
   var nameOfOwner= $('#owner').text();
-  $.getJSON('/private/getList/'+customID, function(data) {
-    console.log(data);
-    var items = [];
-    // $.ajax({
-    //   url: '/private/delete/'+customID+'/'+nameOfOwner,
-    //   type: 'DELETE'
+  // console.log(nameOfOwner+' 148');
+    $.ajax({
+      url: '/private/delete/'+customID+'/'+nameOfOwner,
+      type: 'DELETE'
 
-    // });
-    $.each(data, function(key, val) {
-      console.log(val.name);
-      var menuName = val.order;
-      var menuQty = parseInt(val.quantity);
-      if(val.name===$('#owner').text()){
-        console.log($('#'+menuName));
-        var param = menuName.replace(/\s/g,'');
-        var qtyText = $(`#${param}`);
-        console.log(qtyText);
-        console.log($('#CheeseNaan'));
-      }
+    }).done(function(){
+      $.each(data, function(key, val) {
+        console.log(val.name);
+        var menuName = val.order;
+        var menuQty = parseInt(val.quantity);
+        if(val.name===$('#owner').text()){
+          console.log($('#'+menuName));
+          var param = menuName.replace(/\s/g,'');
+          var qtyText = $(`#${param}`);
+          console.log(qtyText);
+          console.log($('#CheeseNaan'));
+        }
+      });
     //   if (val.name === $('#owner').text()){
     //     console.log($('#'menuName));
     // }
-  });
-
-  });
+    });
 };
 
 function add(e) {

@@ -277,6 +277,7 @@ app.post('/private/postOrder/:id',(req,res)=>{
 app.delete('/private/delete/:id/:name',(req,res)=>{
 	var id = req.params.id;
 	var name = req.params.name;
+	console.log('---------server---------');
 	console.log(id);
 	console.log(name);
 
@@ -285,6 +286,7 @@ app.delete('/private/delete/:id/:name',(req,res)=>{
 		'customID': id
 	}).then((doc)=>{
 		console.log(doc);
+		res.send(doc);
 	})
 })
 
