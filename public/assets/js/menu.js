@@ -140,16 +140,17 @@ function populateOtherOrders() {
   });
 }
 
+//to populate the order for editing. 
 function populateOwnerOrders(){
   var nameOfOwner= $('#owner').text();
   $.getJSON('/private/getList/'+customID, function(data) {
     console.log(data);
     var items = [];
-    $.ajax({
-      url: '/private/delete/'+customID+'/'+nameOfOwner,
-      type: 'DELETE'
+    // $.ajax({
+    //   url: '/private/delete/'+customID+'/'+nameOfOwner,
+    //   type: 'DELETE'
 
-    });
+    // });
     $.each(data, function(key, val) {
       console.log(val.name);
       var menuName = val.order;
@@ -157,10 +158,9 @@ function populateOwnerOrders(){
       if(val.name===$('#owner').text()){
         console.log($('#'+menuName));
         var param = menuName.replace(/\s/g,'');
-        console.log(param);
-        console.log(menuQty);
-        $(`#${param}`).text(menuQty);
-        $('#'+param).text(menuQty);
+        var qtyText = $(`#${param}`);
+        console.log(qtyText);
+        console.log($('#CheeseNaan'));
       }
     //   if (val.name === $('#owner').text()){
     //     console.log($('#'menuName));
@@ -190,6 +190,7 @@ function subtract(e) {
   }
 }
 
+//Retrieve Menu and convert JSON to html for display
 function processMenu() {
   var section = "";
   var count = 0;
@@ -232,7 +233,7 @@ function processMenu() {
           $("#menu-wrapper").append(chunk);
           chunk = "";
         }
-        chunk += '<details><summary class ="menu-summary">' + val.section + '</summary><table><tr><td class = "menu-name">' + val.title + `<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$` + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty" id="'+param+'">0</span><button class="xsmall addQty">+</button></td></tr>';
+        chunk += '<details><summary class ="menu-summary">' + val.section + '</summary><table><tr><td class = "menu-name">' + val.title + '<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$' + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty" id="'+param+'">0</span><button class="xsmall addQty">+</button></td></tr>';
 
       } else {
         chunk += '<tr><td class = "menu-name">' + val.title + '<br><input type="hidden" class ="menu-comments" type="text" name="comments" placeholder="Comments" ></td><td class = "menu-price">$' + val.price + '</td><td class="menu-qty"><button class="xsmall subtractQty">-</button><span class="order-qty" id="'+param+'">0</span><button class="xsmall addQty">+</button></td></tr>';
@@ -241,6 +242,8 @@ function processMenu() {
     });
     $("#menu-wrapper").append(chunk);
   });
+
+  
 
 }
 
